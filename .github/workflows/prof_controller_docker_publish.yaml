@@ -13,7 +13,7 @@ env:
   ARCH: linux/ppc64le,linux/amd64
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.actor }}/dnsmasq
-  IMG: ${{ github.actor }}/dnsmasq
+  IMG: ${{ env.IMAGE_NAME }}/${{ github.actor }}/dnsmasq
 
 jobs:
   push_to_registry:
