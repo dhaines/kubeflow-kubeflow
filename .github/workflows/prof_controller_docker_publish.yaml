@@ -27,12 +27,16 @@ jobs:
         filters: |
           version:
             - 'releasing/version/VERSION'
-
-    - name: Login to DockerHub
+    
+    # Login against a Docker registry except on PR
+    # https://github.com/docker/login-action
+    - name: Log into registry ${{ env.REGISTRY }}
+      if: github.event_name != 'pull_request'
       uses: docker/login-action@v2
       with:
-        username: kubeflownotebookswg
-        password: ${{ secrets.KUBEFLOWNOTEBOOKSWG_DOCKER_TOKEN }}
+        registry: ${{ env.REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Setup QEMU
       uses: docker/setup-qemu-action@v2
