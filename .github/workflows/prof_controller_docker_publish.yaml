@@ -8,6 +8,7 @@ on:
     paths:
       - components/profile-controller/**
       - releasing/version/VERSION
+      - .github/workflows/*
 
 env:
   DOCKER_USER: kubeflownotebookswg
