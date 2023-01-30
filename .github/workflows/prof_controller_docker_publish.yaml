@@ -10,9 +10,9 @@ on:
       - releasing/version/VERSION
 
 env:
-  DOCKER_USER: kubeflownotebookswg
-  IMG: kubeflownotebookswg/profile-controller
   ARCH: linux/ppc64le,linux/amd64
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.actor }}/dnsmasq
 
 jobs:
   push_to_registry:
