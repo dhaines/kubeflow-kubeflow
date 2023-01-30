@@ -3,12 +3,10 @@ on:
   push:
     branches:
       - master
-      - dhaines-patch-1
       - v*-branch
     paths:
       - components/profile-controller/**
       - releasing/version/VERSION
-      - .github/workflows/*
 
 env:
   DOCKER_USER: kubeflownotebookswg
