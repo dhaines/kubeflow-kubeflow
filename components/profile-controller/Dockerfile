@@ -1,7 +1,7 @@
-LABEL org.opencontainers.image.source=https://github.com/dhaines/kubeflow-kubeflow
-
 # Build the manager binary
 FROM golang:1.17 as builder
+
+LABEL org.opencontainers.image.source=https://github.com/dhaines/kubeflow-kubeflow
 
 WORKDIR /workspace
 # Copy the Go Modules manifests
