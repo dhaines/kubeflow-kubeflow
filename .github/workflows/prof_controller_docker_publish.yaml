@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - dhaines-patch-1
       - v*-branch
     paths:
       - components/profile-controller/**
