@@ -12,8 +12,9 @@ on:
 env:
   ARCH: linux/ppc64le,linux/amd64
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.actor }}/dnsmasq
-  IMG: ghcr.io/${{ github.actor }}/dnsmasq
+  IMAGE_NAME: ${{ github.actor }}/profile-controller
+  IMG: ghcr.io/${{ github.actor }}/profile-controller
+  #v1.6.0-rc.1
 
 jobs:
   push_to_registry:
