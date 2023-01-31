@@ -1,4 +1,4 @@
-name: Build & Publish Profile Controller Docker image (custom)
+name: Custom Build & Publish Profile Controller Docker image
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
