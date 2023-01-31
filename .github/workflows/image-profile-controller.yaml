@@ -6,6 +6,7 @@ name: Custom Build & Publish Profile Controller Docker image
 # documentation.
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
