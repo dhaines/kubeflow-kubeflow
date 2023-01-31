@@ -21,6 +21,8 @@ RUN CGO_ENABLED=0 GOOS=linux GO111MODULE=on go build -a -o manager main.go;
 # Use distroless as minimal base image to package the manager binary
 # Refer to https://github.com/GoogleContainerTools/distroless for more details
 FROM gcr.io/distroless/base:latest as serve
+LABEL org.opencontainers.image.source=https://github.com/dhaines/kubeflow-kubeflow
+
 WORKDIR /
 COPY --from=builder /workspace/dash /bin/dash
 
